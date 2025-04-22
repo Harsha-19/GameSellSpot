@@ -92,8 +92,8 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
           title: game.title,
           price: game.price,
           discountedPrice,
-          imageUrl: game.imageUrl,
-          edition: game.edition,
+          imageUrl: (game.imageUrl || '') as string,
+          edition: (game.edition || 'Standard') as string,
           quantity: 1
         };
         

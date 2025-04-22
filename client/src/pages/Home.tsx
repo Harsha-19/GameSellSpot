@@ -60,9 +60,9 @@ const Home = () => {
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-poppins font-bold">Featured Games</h2>
           <Link href="/store">
-            <a className="text-primary hover:text-primary/80 flex items-center">
+            <div className="text-primary hover:text-primary/80 flex items-center cursor-pointer">
               View All <i className="fas fa-arrow-right ml-2"></i>
-            </a>
+            </div>
           </Link>
         </div>
         
@@ -102,8 +102,11 @@ const Home = () => {
               <div>
                 <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">Summer Sale is Here!</h2>
                 <p className="text-white/90 mb-6">Get up to 70% off on hundreds of titles. Limited time offer - ends August 30th.</p>
-                <Button className="bg-white text-primary hover:bg-white/90">
-                  <Link href="/store">Browse Sale Games</Link>
+                <Button 
+                  className="bg-white text-primary hover:bg-white/90"
+                  onClick={() => window.location.href = '/store'}
+                >
+                  Browse Sale Games
                 </Button>
               </div>
             </div>
@@ -123,9 +126,9 @@ const Home = () => {
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-poppins font-bold">New Releases</h2>
           <Link href="/store?filter=new">
-            <a className="text-primary hover:text-primary/80 flex items-center">
+            <div className="text-primary hover:text-primary/80 flex items-center cursor-pointer">
               View All <i className="fas fa-arrow-right ml-2"></i>
-            </a>
+            </div>
           </Link>
         </div>
         

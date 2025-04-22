@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&family=Roboto+Mono:wght@500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -86,8 +88,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary));
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&family=Roboto+Mono:wght@500&display=swap');
 
 .font-poppins {
   font-family: 'Poppins', sans-serif;

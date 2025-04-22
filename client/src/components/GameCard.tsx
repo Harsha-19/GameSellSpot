@@ -26,7 +26,7 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
             alt={game.title} 
             className="w-full h-44 object-cover"
           />
-          {game.discountPercentage > 0 && (
+          {game.discountPercentage && game.discountPercentage > 0 && (
             <div className="absolute top-2 right-2 bg-primary text-white text-xs py-1 px-2 rounded-full">
               -{game.discountPercentage}%
             </div>
@@ -49,11 +49,11 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
                 <i key={`empty-${i}`} className="far fa-star"></i>
               ))}
             </div>
-            <span className="text-sm text-gray-400 ml-1">{formatRating(game.rating)}</span>
+            <span className="text-sm text-gray-400 ml-1">{formatRating(game.rating || 0)}</span>
           </div>
           <div className="flex justify-between items-center mt-3">
             <div>
-              {game.discountPercentage > 0 ? (
+              {game.discountPercentage && game.discountPercentage > 0 ? (
                 <>
                   <span className="text-gray-400 line-through text-sm">
                     {formatPrice(game.price)}
